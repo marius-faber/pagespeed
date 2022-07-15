@@ -1,0 +1,12 @@
+{% sw_extends '@Storefront/storefront/element/cms-element-image-gallery.html.twig' %}
+
+{% block element_image_gallery_slider_dots_buttons %}
+    {% for image in mediaItems %}
+        {% block element_image_gallery_slider_dots_button %}
+            <button class="base-slider-dot {% if loop.first %}tns-nav-active{% endif %}"
+                    data-nav-dot="{{ loop.index }}"
+                    tabindex="-1"></button>
+        {% endblock %}
+    {% endfor %}
+{% endblock %}
+
